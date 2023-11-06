@@ -11,7 +11,7 @@ const Home =() => {
 
   return(
     <div className='home'>
-        <Blog blogs={blogs} />
+        <Blog blogs={blogs} title='All title!' />
     </div>
   )
 }
