@@ -1,7 +1,8 @@
 import React from 'react'
 
-const Blog =() => {
+const Blog =(props) => {
 
+    const blogs = props.blogs;
 
   return (
     <div  className='blog-list'>
