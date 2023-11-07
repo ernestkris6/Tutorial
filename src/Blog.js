@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Blog =({blogs, title}) => {
+const Blog =({blogs, title, handleDelete}) => {
 
     // const blogs = props.blogs;
     // const title = props.title;
@@ -16,6 +16,7 @@ const Blog =({blogs, title}) => {
                 <h2>{blog.title}</h2>
                 <p><strong>{blog.body}</strong></p>
                 <p>written by {blog.author}</p>
+                <button onClick={()=> handleDelete(blog.id)}>Delete</button>
             </div>
           ))}
     </div>

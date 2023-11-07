@@ -3,6 +3,10 @@ import Blog from './Blog';
 
 const Home =() => {
 
+  const handleDelete = () => {
+      
+  }
+
       const [blogs, setBlogs] = useState([
         { title : "My new website", body : "Lorem ipsum...", author : "Mario", id : 1},
         { title : "Welcome party", body : "Lorem ipsum...", author : "Yoshi", id : 2},
@@ -11,7 +15,7 @@ const Home =() => {
 
   return(
     <div className='home'>
-        <Blog blogs={blogs} title='All title!' />
+        <Blog blogs={blogs} title='All title!'  />
         <Blog blogs={blogs} title='Mario Blogs' blog={blogs.filter((blog)=> blog.author === 'Mario')}   />
     </div>
   )
