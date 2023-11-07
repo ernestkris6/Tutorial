@@ -18,6 +18,7 @@ const Home =() => {
 
   useEffect(()=>{
     console.log('use efferct ran');
+    console.log(blogs);
   })
 
   return(
