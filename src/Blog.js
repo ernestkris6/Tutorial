@@ -7,6 +7,8 @@ const Blog =({blogs, title, handleDelete}) => {
 
     // console.log(props, blogs);
 
+ 
+
   return (
     <div  className='blog-list'>
         <h1>{title}</h1>

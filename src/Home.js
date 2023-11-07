@@ -3,8 +3,9 @@ import Blog from './Blog';
 
 const Home =() => {
 
-  const handleDelete = () => {
-      
+  const handleDelete = (id) => {
+      const newBlogs = blogs.filter(blog => blog.id !== id);
+      setBlogs(newBlogs);
   }
 
       const [blogs, setBlogs] = useState([
@@ -15,8 +16,8 @@ const Home =() => {
 
   return(
     <div className='home'>
-        <Blog blogs={blogs} title='All title!'  />
-        <Blog blogs={blogs} title='Mario Blogs' blog={blogs.filter((blog)=> blog.author === 'Mario')}   />
+        <Blog blogs={blogs} title='All title!' handleDelete={handleDelete} />
+        {/* <Blog blogs={blogs} title='Mario Blogs' blog={blogs.filter((blog)=> blog.author === 'Mario')}   /> */}
     </div>
   )
 }
