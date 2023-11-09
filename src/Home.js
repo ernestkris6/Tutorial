@@ -1,5 +1,5 @@
 import React from 'react'
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 import "./Blog";
 import Blog from './Blog';
@@ -17,6 +17,16 @@ const Home =() => {
       const newBlogs = blogs.filter(blog => blog.id !== id );
       setBlogs(newBlogs);
     }
+
+    //fetch data
+    //authentication
+
+    useEffect(()=>{
+      console.log('useEffect ran');
+      console.log(blogs);
+    });
+
+
    
 
   return (
