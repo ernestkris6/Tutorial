@@ -3,8 +3,11 @@ import { useState, useEffect } from 'react';
 
 import "./Blog";
 import Blog from './Blog';
+import useFetch from './useFetch';
 
 const Home = () => {
+
+  const {data:blogs, isPending, error} = useFetch('http://localhost:8000/blogs');
 
     // const [blogs, setBlogs] = useState([
     //   { title: "Web Dev Tools", body: "lorem ipsum dolor...", author: "Ernest", id: "1" },
@@ -32,35 +35,6 @@ const Home = () => {
   //     console.log('useEffect ran');
   //     console.log(name);
   // }, [name]);
-
-
-useEffect(()=> {
-  setTimeout(()=>{
-    fetch('http://localhost:8000/blogs')
-    .then(res => {
-        return res.json()
-        if(!res.ok) {
-          throw Error('Could not fetch data!')
-        }
-    })
-    .then(data => {
-      setBlogs(data)
-      setIsPending(false)
-    })
-    .catch(err => {
-      setError(err.message);
-    })
-
-  }, 2000)
-    
-}, [])
-
-
-  
-
-
-
-
 
   return (
     <div className='home'>
