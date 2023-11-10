@@ -12,9 +12,7 @@ const Home = () => {
     //   { title: "Learning Javascript", body: "lorem ipsum dolor...", author: "Ernest", id: "3"}
     // ]);
 
-    const [blogs, setBlogs] = useState(null);
-    const [isPending, setIsPending]  = useState(true);
-    const [error, setError] = useState(null);
+    
     
     
     // const [name, setName] = useState('Mario');
