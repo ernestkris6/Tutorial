@@ -14,6 +14,8 @@ const Home = () => {
 
     const [blogs, setBlogs] = useState(null);
     const [isPending, setIsPending]  = useState(true);
+    const [error, setError] = useState(null);
+    
     
     // const [name, setName] = useState('Mario');
 
@@ -36,9 +38,9 @@ const Home = () => {
 
 useEffect(()=> {
   setTimeout(()=>{
-    fetch('http://localhost:8000/blogss')
+    fetch('http://localhost:8000/blogs')
     .then(res => {
-        // return res.json()
+        return res.json()
         if(!res.ok) {
           throw Error('Could not fetch data!')
         }
@@ -48,7 +50,7 @@ useEffect(()=> {
       setIsPending(false)
     })
     .catch(err => {
-      console.log(err.message);
+      setError(err.message);
     })
 
   }, 2000)
@@ -64,8 +66,9 @@ useEffect(()=> {
 
   return (
     <div className='home'>
+          {error && <div>{error}</div>}
           { isPending && <div><h2>Loading...</h2></div>}
-         {blogs && <Blog blogs={blogs} title="Ernest's Blogs" />}
+          {blogs && <Blog blogs={blogs} title="Ernest's Blogs" />}
         
     </div>
   )
