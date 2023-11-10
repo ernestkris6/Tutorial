@@ -12,10 +12,10 @@ useEffect(()=> {
     setTimeout(()=>{
       fetch(url)
       .then(res => {
-          return res.json()
           if(!res.ok) {
             throw Error('Could not fetch data!')
           }
+          return res.json()
       })
       .then(data => {
         setData(data)
