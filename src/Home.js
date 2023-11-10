@@ -36,9 +36,12 @@ const Home = () => {
 
 useEffect(()=> {
   setTimeout(()=>{
-    fetch('http://localhost:8000/blogs')
+    fetch('http://localhost:8000/blogss')
     .then(res => {
-        return res.json()
+        // return res.json()
+        if(!res.ok) {
+          throw Error('Could not fetch data!')
+        }
     })
     .then(data => {
       setBlogs(data)
