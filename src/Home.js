@@ -13,6 +13,7 @@ const Home = () => {
     // ]);
 
     const [blogs, setBlogs] = useState(null);
+    const [isPending, setIsPending]  = useState(true);
     
     // const [name, setName] = useState('Mario');
 
@@ -33,16 +34,23 @@ const Home = () => {
   // }, [name]);
 
 
-   useEffect(()=> {
-      fetch('http://localhost:8000/blogs')
-        .then((res) => {
-          return res.json()
-        })
-        .then(data => {
-          console.log(data);
-          setBlogs(data)
-        })
-   }, [])
+useEffect(()=> {
+  setTimeout(()=>{
+    fetch('http://localhost:8000/blogs')
+    .then(res => {
+        return res.json()
+    })
+    .then(data => {
+      setBlogs(data)
+      setIsPending(false)
+    })
+
+  }, 2000)
+    
+}, [])
+
+
+  
 
 
 
@@ -50,13 +58,16 @@ const Home = () => {
 
   return (
     <div className='home'>
+          { isPending && <div><h2>Loading...</h2></div>}
          {blogs && <Blog blogs={blogs} title="Ernest's Blogs" />}
-        { /* <Blog blogs={blogs.filter(blog=> blog.author === 'Ernest')} title="Josh's Blogs" handleDelete={handleDelete} />
-        <Blog blogs={blogs.filter(blog => blog.author === 'Emma')} title="Emma's Blogs" handleDelete={handleDelete} /> */}
-        {/* <button onClick={()=> setName('Luigi')}>Change Name</button>
-        <p>{name}</p> */}
+        
     </div>
   )
 }
 
 export default Home;
+
+{ /* <Blog blogs={blogs.filter(blog=> blog.author === 'Ernest')} title="Josh's Blogs" handleDelete={handleDelete} />
+        <Blog blogs={blogs.filter(blog => blog.author === 'Emma')} title="Emma's Blogs" handleDelete={handleDelete} /> */}
+        {/* <button onClick={()=> setName('Luigi')}>Change Name</button>
+        <p>{name}</p> */}
