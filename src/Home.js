@@ -17,10 +17,10 @@ const Home = () => {
     // const [name, setName] = useState('Mario');
 
 
-  const handleDelete =  (id) => {
-    const newBlogs = blogs.filter(blog => blog.id !== id);
-    setBlogs(newBlogs);
-  }
+  // const handleDelete =  (id) => {
+  //   const newBlogs = blogs.filter(blog => blog.id !== id);
+  //   setBlogs(newBlogs);
+  // }
   
   
 
@@ -33,20 +33,24 @@ const Home = () => {
   // }, [name]);
 
 
-   useEffect(()=>{
+   useEffect(()=> {
       fetch('http://localhost:8000/blogs')
-        .then(res => {
-          return res.json();
+        .then((res) => {
+          return res.json()
         })
-        .then((data)=> {
+        .then(data => {
           console.log(data);
           setBlogs(data)
         })
    }, [])
 
+
+
+
+
   return (
     <div className='home'>
-         {blogs && <Blog blogs={blogs} title="Ernest's Blogs" handleDelete={handleDelete} />}
+         {blogs && <Blog blogs={blogs} title="Ernest's Blogs" />}
         { /* <Blog blogs={blogs.filter(blog=> blog.author === 'Ernest')} title="Josh's Blogs" handleDelete={handleDelete} />
         <Blog blogs={blogs.filter(blog => blog.author === 'Emma')} title="Emma's Blogs" handleDelete={handleDelete} /> */}
         {/* <button onClick={()=> setName('Luigi')}>Change Name</button>
