@@ -2,7 +2,7 @@ const Create = () => {
     return ( 
         <div>
             <h1>
-                New Blog
+                Add a New Blog
             </h1>
         </div>
      );

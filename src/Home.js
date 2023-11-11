@@ -1,7 +1,5 @@
 import React from 'react';
 
-
-import "./Blog";
 import Blog from './Blog';
 import useFetch from './useFetch';
 
