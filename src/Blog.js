@@ -1,4 +1,5 @@
 import React from 'react';
+import BlogDetails from './BlogDetails';
 
 const Blog =({blogs, title}) => {
 
@@ -12,6 +13,7 @@ const Blog =({blogs, title}) => {
           <h1>{blog.title}</h1>
           <p>{blog.body}</p>
           <p>written by {blog.author}</p>
+   
           </div>
         ))}
     </div>
