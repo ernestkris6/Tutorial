@@ -22,7 +22,7 @@ const BlogDetails = () => {
   // //   </div>
   // // )
 
-  const {data:blogs, isPending, error} = useFetch('http://localhost:8000/blogs');
+  const {data:blog, isPending, error} = useFetch('http://localhost:8000/blogs' );
 
 
 
@@ -30,7 +30,12 @@ const BlogDetails = () => {
     <div className='home'>
           { error && <div>{error}</div>}
           { isPending && <div><h2>Loading...</h2></div>}
-          { blogs && <Blog blogs={blogs} title="Ernest's Blogs" />}
+          { blog && (
+            <article>
+              <h2>{ blog.title }</h2>
+              <p>Written by { blog.author }</p>
+            </article>
+          )}
     </div>
   )
 }
