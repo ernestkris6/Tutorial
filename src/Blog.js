@@ -11,9 +11,9 @@ const Blog =({blogs, title}) => {
         {blogs.map((blog)=>(
           <div className='blog-preview' key={blog.id}>
           <Link to={`/blogs/${blog.id}`}>
-          <h1>{blog.title}</h1>
-          <p>{blog.body}</p>
-          <p>written by {blog.author}</p>
+          <h1>{blog.title}</h1> <br></br>
+          <p>{blog.body}</p> <br></br>
+          <p>Written by {blog.author}</p>
           </Link>
    
           </div>

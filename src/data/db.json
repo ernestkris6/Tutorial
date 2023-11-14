@@ -2,16 +2,18 @@
     "blogs" : [
         {
             "title" : "My first blog",
-            "body" : "Why do we use it? It is a long established fact that a reader will be distracted.",
+            "body" : "Why do we use it? It is a long established fact that a reader will be distracted Kundon highlighted the major cloud trends he has seen, especially in the media industry.",
             "author" : "Mario",
             "id" : 1
         },
         {
             "title" : "Opening party",
-            "body" : "Why do we use it? It is a long established fact that a reader will be distracted.",
+            "body" : "Why do we use it? It is a long established fact that a reader will be distracted Kundon highlighted the major cloud trends he has seen, especially in the media industry.",
             "author" : "Yoshi",
             "id" : 2
         }
 
     ]
 }
+
+
