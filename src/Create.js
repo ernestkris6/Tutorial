@@ -1,9 +1,12 @@
 const Create = () => {
     return ( 
         <div>
-            <h1>
-                Add a New Blog
-            </h1>
+            <h2>
+                Add a New Blog</h2>
+
+            <form>
+                <label>Blog Title</label>
+            </form>
         </div>
      );
 }
