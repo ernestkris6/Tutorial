@@ -6,10 +6,11 @@ import useFetch from './useFetch';
 const BlogDetails = () => {
 
     const { id } = useParams();
-    const { data: blog, isPending, error } = useFetch('http://localhost:8000/blogs' )
+    const { data: blog, isPending, error } = useFetch('http://localhost:8000/blogs/' + id )
   return (
     <div>
-        {isPending && <div><h2>Loading...</h2></div>}
+      <h2>Blog - {id}</h2>
+       {isPending && <div><h2>Loading...</h2></div>}
         { error && <div><h2>{ error }</h2></div> }
         {blog && (
             <article>
@@ -19,6 +20,7 @@ const BlogDetails = () => {
 
             </article>
         )}
+        
     </div>
   );
 }
