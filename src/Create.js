@@ -9,6 +9,9 @@ const Create = () => {
     
     const handleSubmit = (e) => {
         e.preventDefault();
+
+        const blog = {title, body, author}
+        console.log(blog);
     }
 
     return ( 
