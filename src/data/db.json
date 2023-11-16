@@ -1,3 +1,28 @@
 {
-  "blogs": []
+  "blogs": [
+    {
+      "title": "It's my birthday",
+      "body": "Happy Birthday to me",
+      "author": "Ernest",
+      "id": 1
+    },
+    {
+      "title": "God is too faithful to me",
+      "body": "It's a new year for me",
+      "author": "Ernest",
+      "id": 2
+    },
+    {
+      "title": "Mayor is Here",
+      "body": "Yo I'm Mayor\nIm a good boy\nyo whenever people see me, they are very happy\nleemao",
+      "author": "Ernest",
+      "id": 3
+    },
+    {
+      "title": "Mayor",
+      "body": "On God",
+      "author": "Mayor",
+      "id": 4
+    }
+  ]
 }
