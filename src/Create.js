@@ -1,14 +1,24 @@
+import { useState } from "react";
+
 const Create = () => {
+
+    const [title, setTitle] = useState('');
+    const handleSubmit = (e) => {
+        e.preventDefault();
+    }
+
     return ( 
         <div className="create">
             <h2>
                 Add a New Blog</h2>
 
-            <form>
+            <form onSubmit={handleSubmit}>
                 <label>Blog Title</label>
                 <input 
                 type="text"
                 required
+                value={title}
+                onChange={(e)=> setTitle(e.target.value)}
                 />
 
             <label>Blog body</label>
@@ -23,7 +33,7 @@ const Create = () => {
                 </select>
 
                 <button>Add Blog</button>
-                
+                <p>{title}</p>
             </form>
         </div>
      );
