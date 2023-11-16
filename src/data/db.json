@@ -1,12 +1,6 @@
 {
   "blogs": [
     {
-      "title": "It's my birthday",
-      "body": "Happy Birthday to me",
-      "author": "Ernest",
-      "id": 1
-    },
-    {
       "title": "God is too faithful to me",
       "body": "It's a new year for me",
       "author": "Ernest",
@@ -23,6 +17,12 @@
       "body": "On God",
       "author": "Mayor",
       "id": 4
+    },
+    {
+      "title": "It's my birthday",
+      "body": "Happy Birthday to me",
+      "author": "Ernest",
+      "id": 5
     }
   ]
 }
